@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+{%extends 'base.html'%}
+{%load static%}
+
+{% block body_block%}
+<div class="jumbotron">
+  <div class="container" align="center">
+      {%for e in qs%}
+      <h4>Hi {{e.name}}</h4>{%endfor%}
+       <table class="table table-borderless">
+
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Address</th>
+                                    <th>Email</th>
+                                    <th>Username</th>
+                                    <th>Mobile</th>
+                                    <th>Password</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    {%for e in qs%}
+                                    <td>{{e.name}}</td>
+                                    <td>{{e.Address}}</td>
+                                    <td>{{e.email}}</td>
+                                    <td>{{e.username}}</td>
+                                     <td>{{e.mobile_no}}</td>
+                                    <td>{{e.password}}</td> {%endfor%}
+                                </tr>
+                            </tbody>
+                        </table>
+
+
+  </div>
+</div>
+ {%endblock%}

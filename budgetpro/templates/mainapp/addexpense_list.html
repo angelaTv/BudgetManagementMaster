@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{%extends 'base.html'%}
+{%load static%}
+{% block body_block%}
+<h4>Your Expense List</h4>
+<div class="jumbotron">
+  <div class="container" align="center">
+      {% for ex in qs|slice:":1" %}
+      <h3>Hi {{user}}</h3>{% endfor %}
+<table class="table table-striped table-dark">
+{%for ct in qs%}
+<tr>
+    <td><a href="{%url 'addexpensedetail' ct.id %}">{{ forloop.counter }}</a></td>
+    <td>{{ct.budget_category}}</td>
+    <td>{{ct.expense}}</td>
+    <td><a href="{%url 'addexpensedetail' ct.id %}">view</a></td>
+    <td><a href="{%url 'updateaddexpense' ct.id %}">update</a></td>
+    <td><a href="{%url 'deleteaddexpense' ct.id %}">delete</a></td>
+</tr>
+{%endfor%}
+    </table>
+  </div>
+</div>
+{%endblock%}

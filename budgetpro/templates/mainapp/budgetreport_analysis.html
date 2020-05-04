@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <title>Budget App Report</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+
+        <nav>
+            <div class="nav-wrapper">
+                <a href=# class='brand-logo center'>Hi {{user}}</a>
+                <ul class="right">
+                    <li><a href="{%url 'home'%}" class='btn'>Home</a></li>
+                    <li><a href="{%url 'reporthome'%}" class='btn'>Reports</a></li>
+                </ul>
+            </div>
+        </nav>
+        <br>
+        <div class="section">
+        <div class="row">
+            <form class="col s12"  method='post'>
+                {% csrf_token %}
+                <div class="row">
+                <div class="container center">
+
+                            <h4 clas='center'>You've budget  total of :
+                                <span style="color:green;">{{bud}}</span> Rupees</h4>
+
+                            <h4 clas='center'>You've spent a total of :
+                                <span style="color:red;">{{data}}</span> Rupees</h4>
+
+                            <h4 clas='center'>You've balance amount of :
+                                <span style="color:blue;">{{diff}}</span> Rupees</h4>
+                </div>
+                </div>
+            </form>
+        </div>
+        </div>
+
+        <div class="section">
+            <div class="row">
+                <div class="container">
+                    <div class="col s6">
+                        <table class="striped centered responsive-table">
+                            <thead>
+                                <tr>
+                                    <th>Item</th>
+                                    <th>Amount</th>
+                                    <th>Date</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                {% for expense_item in qs %}
+                                <tr>
+                                    <td>{{ expense_item.budget_category }}</td>
+                                    <td>{{ expense_item.expense }}</td>
+                                    <td>{{ expense_item.entered_date}}</td>
+                                    <td></td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col s6">
+<!--                        <img class='responsive-img' src= "{% static 'budget_app/expense.jpg' %}">-->
+                    </div>
+                </div>
+        </div>
+
+
+        </div>
+
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    </body>
+
+</html>
+

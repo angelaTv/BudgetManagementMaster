@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5c2f750e-0b15-4e25-900d-b1c4274a8050" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints>
+      <file url="file://$PROJECT_DIR$/mainapp/views.py" />
+    </disable_hints>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="budgetpro" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/mainapp/views.py" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="ProjectId" id="1adD9q6xBmaEKGLdRsQklPBkyCX" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ANGELA\budgetpro\templates" />
+      <recent name="C:\Users\ANGELA\budgetpro\templates\accounts" />
+      <recent name="C:\Users\ANGELA\budgetpro\static" />
+      <recent name="C:\Users\ANGELA\budgetpro\media" />
+      <recent name="C:\Users\ANGELA\budgetpro\templates\tryitheme" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ANGELA\budgetpro\templates" />
+      <recent name="C:\Users\ANGELA\budgetpro\media" />
+      <recent name="C:\Users\ANGELA\budgetpro\templates\budgettrial" />
+      <recent name="C:\Users\ANGELA\budgetpro\templates\mainapp" />
+      <recent name="C:\Users\ANGELA\budgetpro\accounts" />
+    </key>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5c2f750e-0b15-4e25-900d-b1c4274a8050" name="Default Changelist" comment="" />
+      <created>1587056428159</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587056428159</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="420" y="145" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1587377854119">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="420" y="145" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.680@0.0.1280.680" timestamp="1587377854119" />
+    <state x="421" y="97" key="FileChooserDialogImpl" timestamp="1588318812286">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="421" y="97" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1588318812286" />
+    <state x="142" y="0" key="SettingsEditor" timestamp="1587056466034">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1587056466034" />
+    <state x="337" y="166" key="com.intellij.ide.util.TipDialog" timestamp="1587699201488">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="337" y="166" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1587699201488" />
+    <state x="238" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1587146086372">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="238" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1280.680@0.0.1280.680" timestamp="1587146086372" />
+  </component>
+</project>

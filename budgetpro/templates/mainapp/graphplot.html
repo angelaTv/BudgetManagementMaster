@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <title>Budget App Report</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+         <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    </head>
+
+    <body>
+
+        <nav>
+            <div class="nav-wrapper">
+                <a href=# class='brand-logo center'>Hi  {{user}}, You've spent a total of :
+                                <span style="color:green;">{{qs.sum}}</span> Rupees</a>
+                <ul class="right">
+                    <li><a href="{%url 'home'%}" class='btn'>Home</a></li>
+                    <li><a href="{%url 'reporthome'%}" class='btn'>Reports</a></li>
+                </ul>
+            </div>
+        </nav>
+        <br>
+<h3 align="center">Category Wise Expense Graph</h3>
+
+                            <br>
+
+        <h5 align="center"style="color:green;">In which category I spent the most?</h5>
+
+        <div class="section">
+            <div class="row">
+                <div class="container">
+                    <div class="col s6">
+                        <br/>
+                         <br/><br/>
+                        <table class="striped centered responsive-table">
+    <thead>
+        <tr>
+        <th>Category</th>
+        <th>Amount</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for expense_item in t %}
+        <tr>
+        <td>{{ expense_item.budget_category__category_name }}</td>
+        <td>{{ expense_item.categorysum }}</td>
+        <td></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+    </table>
+                    </div>
+                    <div class="col s6">
+                        {% autoescape off %}
+                {{ plot_div }}
+                {% endautoescape %}
+                    </div>
+                </div>
+        </div>
+
+
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+    </body>
+</html>
+

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load static %}
+
+
+
+<html>
+
+    <head>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <title>Budget App</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+ <form class="col s12" method='post'>
+{% csrf_token %}
+<div class="row">
+     {%for field in form%}
+    <div class="input-field col s3">
+        {{field.label_tag}}
+            {{field}}
+            {{field.errors}}
+    </div>
+     {%endfor%}
+<!--<input type="submit">-->
+    <button class="btn waves-effect waves-light" type="submit" >Add Expense
+    <i class="material-icons right">add_circle</i>
+    </button>
+    </div>
+
+</form>
+
+</body>
+</html>

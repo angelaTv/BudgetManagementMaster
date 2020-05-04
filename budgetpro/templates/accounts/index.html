@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{%extends 'bas.html'%}
+{%load static%}
+{% block body_block%}
+
+  <header class="masthead">
+
+    <div class="container h-100">
+      <div class="row h-100">
+        <div class="col-lg-7 my-auto">
+
+          <div class="header-content mx-auto">
+            <h3 class="mb-5">Your Budget Diary.A 'Savings Check' to your routine.Our new Budget app,
+                to stack your savings and handle your budget</h3>
+          </div>
+        </div>
+        <div class="col-lg-5 my-auto">
+
+          <div class="device-container">
+
+              <div class="device">
+                 <a href="{%url 'login'%}" class="btn btn-outline btn-xl js-scroll-trigger">Login</a>
+
+                </div>
+             <br/>
+                <div class="screen">
+                   <a href="{%url 'register'%}"  class="btn btn-outline btn-xl js-scroll-trigger">Register</a>
+                </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+{%endblock%}
+
+
+
+
+

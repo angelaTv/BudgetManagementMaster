@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+     <link href="{%static 'vendor/bootstrap/css/bootstrap.min.css'%}" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="{%static 'vendor/fontawesome-free/css/all.min.css'%}" rel="stylesheet">
+  <link rel="stylesheet" href="{%static 'vendor/simple-line-icons/css/simple-line-icons.css'%}">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+  <!-- Plugin CSS -->
+  <link rel="stylesheet" href="{%static 'device-mockups/device-mockups.min.css'%}" >
+  <!-- Custom styles for this template -->
+  <link href="{%static 'css/new-age.min.css'%}"  rel="stylesheet">
+</head>
+<body>
+ <section class="download bg-primary text-center" id="download">
+      <h2 class="section-heading">Login Here!</h2>
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-8 mx-auto">
+<form method="post"id="refrm">
+    {%csrf_token%}
+     <fieldset>
+    {{form.as_p}}
+    <button type="button" class="btn btn-primary" onclick="log()">Login</button>
+     </fieldset>
+</form>
+              </div>
+      </div>
+    </div>
+  </section>
+<script src="{% static 'vendor/jquery/jquery.min.js'%}" ></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Plugin JavaScript -->
+  <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js'%}" ></script>
+  <!-- Custom scripts for this template -->
+  <script src="{% static 'js/new-age.min.js'%}" ></script>
+</body>
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+<script>
+  function log(){
+   $.ajax({
+  type:"POST",
+  url:"{%url 'login'%}",
+  data:$('#refrm').serialize(),
+  success:function(data){
+  if(data.status==200){
+    console.log("data saved");
+  swal("user successfully logged in")
+  .then((value)=>{
+  window.location.href="home"
+  });
+    }
+  else
+    {
+    swal("not saved","error");
+    }
+  }
+  });
+ }
+</script>

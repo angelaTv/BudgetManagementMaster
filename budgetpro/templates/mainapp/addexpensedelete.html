@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{%extends 'base.html'%}
+{%load static%}
+{% block body_block%}
+<div class="jumbotron">
+    <div class="container" align="center">
+<form method="post">
+    {%csrf_token%}
+    {{form.as_p}}
+    <input type="submit" value="delete">
+</form>
+</div>
+</div>
+{%endblock%}

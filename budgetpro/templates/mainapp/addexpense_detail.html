@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{%extends 'base.html'%}
+{%load static%}
+{% block body_block%}
+<h4>Expense Detail</h4>
+<div class="jumbotron">
+  <div class="container" align="center">
+ <h6>Record entered on {{qs.auto_date}}</h6>
+ <table class="table table-borderless">
+
+                            <thead>
+                                <tr>
+                                    <th>Category</th>
+                                    <th>Expense</th>
+                                    <th>Remarks</th>
+                                    <th>Spent Date</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>{{qs.budget_category}}</td>
+                                    <td>{{qs.expense}}</td>
+                                    <td>{{qs.remarks}}</td>
+                                    <td>{{qs.entered_date}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+  </div>
+</div>
+    {%endblock%}

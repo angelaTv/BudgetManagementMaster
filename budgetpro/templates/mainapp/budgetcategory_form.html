@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{%extends 'base.html'%}
+{%load static%}
+{% block body_block%}
+<h4>Create Category</h4>
+<form method="POST">
+    <div class="form-group">
+    {%csrf_token%}
+    {{form.as_p}}
+    <input type="submit">
+    </div>
+</form>
+
+{%endblock%}

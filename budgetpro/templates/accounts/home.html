@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{%extends 'basehomes.html'%}
+{%load static%}
+{% block body_block%}
+
+<section class="features" id="features">
+    <div class="container">
+      <div class="section-heading text-center">
+        <h2>Welcome to BudgetR</h2>
+        <p class="text-muted">Check out what you can do with this app!</p>
+        <hr>
+      </div>
+
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="feature-item">
+                  <i class="fas fa-folder-plus"></i>
+                     <a href="{%url 'createaddexpense'%}" class="stretched-link"><h3>Add Your Expenses Here</h3></a>
+                  <p class="text-muted">Add your monthly expenses and find your daily ,weekly,monthly and yearly expenses.</p>
+                </div>
+              </div>
+
+              <div class="col-lg-6">
+                <div class="feature-item">
+                 <i class="fas fa-list-ol"></i>
+                    <a href="{%url 'categorylist'%}"class="stretched-link"> <h3>Customize Category</h3></a>
+                  <p class="text-muted">Add yor own category to cutomize your expense list and arranging</p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="feature-item">
+                 <i class="fas fa-clipboard-list"></i>
+                     <a href="{%url 'reporthome'%}"  class="stretched-link"><h3>Reports</h3></a>
+                  <p class="text-muted">Analyse your Expenses.Find out your expense behaviour!</p>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="feature-item">
+                  <i class="far fa-sticky-note"></i>
+                    <a href="{%url 'addexpenselist'%}" class="stretched-link"><h3>Expenses List</h3></a>
+                  <p class="text-muted">Update,Delete and View your all the Expenses</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{%endblock%}
+

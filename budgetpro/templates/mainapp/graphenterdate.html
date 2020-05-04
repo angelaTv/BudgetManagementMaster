@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+{%extends 'base.html'%}
+{%load static%}
+
+{% block body_block%}
+<div class="jumbotron">
+  <div class="container" align="center">
+</div>
+ <form class="col s12" action="{%url 'graphrepo'%}" method='post'>
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="input-field col s3">
+                                <input placeholder="startdate" name="startdate" id='startdate' type='date'>
+                                <label for='startdate'>Start Date</label>
+                            </div>
+                             <div class="input-field col s3">
+                                <input placeholder="enddate" name="enddate" id='enddate' type='date'>
+                                <label for='enddate'>End Date</label>
+                            </div>
+                             <div class="input-field col s3">
+                                <input type='submit'>
+                            </div>
+                        </div>
+                        </form>
+</form>
+</div>
+ {%endblock%}

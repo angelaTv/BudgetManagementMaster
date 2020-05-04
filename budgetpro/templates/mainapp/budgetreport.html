@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <title>Budget App Report</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+         <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    </head>
+
+    <body>
+
+        <nav>
+            <div class="nav-wrapper">
+                <a href=# class='brand-logo center'>Hi  {{user}} </a>
+                <ul class="right">
+                    <li><a href="{%url 'home'%}" class='btn'>Home</a></li>
+                    <li><a href="{%url 'reporthome'%}" class='btn'>Reports</a></li>
+                </ul>
+            </div>
+        </nav>
+        <br>
+        <div class="section">
+            <div class="row">
+                        <div class="container center">
+                            <h4 clas='center'>You've spent a total of :
+                                <span style="color:red;">{{qs.sum}}</span> Rupees</h4>
+
+                            <br>
+<h5 align="left"style="color:green;">In which category I spent the most?</h5>
+                            <div  class="input-field col s3">
+                                <table  class="striped centered responsive-table">
+    <thead>
+        <tr>
+        <th>Category</th>
+        <th>Amount</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for expense_item in t %}
+        <tr>
+        <td>{{ expense_item.budget_category__category_name }}</td>
+        <td>{{ expense_item.categorysum }}</td>
+        <td></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+    </table>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="row">
+                <div class="container">
+                    <div class="col s6">
+                        <table class="striped centered responsive-table">
+                            <thead>
+                            <h5 style="color:green;">My Expenses</h5><br/>
+                                <tr>
+                                    <th>Item</th>
+                                    <th>Amount</th>
+                                    <th>Date</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                {% for expense_item in data %}
+                                <tr>
+                                    <td>{{ expense_item.budget_category }}</td>
+                                    <td>{{ expense_item.expense }}</td>
+                                    <td>{{ expense_item.entered_date}}</td>
+                                    <td></td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col s6">
+<!--                        <img class='responsive-img' src= "{% static 'budget_app/expense.jpg' %}">-->
+                        {% autoescape off %}
+                {{ plot_div }}
+                {% endautoescape %}
+                    </div>
+                </div>
+        </div>
+
+
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+    </body>
+</html>
+

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{%extends 'base.html'%}
+{%load static%}
+{% block body_block%}
+
+<h4>Delete Category</h4>
+<div class="jumbotron">
+<div class="container" align="center">
+<form method="post">
+    <div class="form-group">
+    {% csrf_token %}
+    {{object}}
+    Are you sure to delete"{{object}}"?
+<input type="submit" value="Delete">
+    </div>
+</form>
+</div>
+</div>
+{%endblock%}
