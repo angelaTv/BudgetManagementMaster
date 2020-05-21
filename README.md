@@ -9,6 +9,6 @@ view and delete for a specific date range.It gives different reports to analyse 
 2)DateWise Reports=>to find date wise report
 other two reports are the sub reports of the above
 
-In the project i have used a good UI than my previous project https://github.com/angelaTv/BudgetProject which is the same project with no 
-much UI#budget-Management_using_Python/Django
+In the project i have used CSS than my previous project https://github.com/angelaTv/BudgetProject which is the same project with no 
+much CSS#budget-Management_using_Python/Django
 
